@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Arev - The Most Beautiful Soul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 to-pink-100 min-h-screen overflow-hidden">
+    <!-- Hidden YouTube Player -->
+    <div class="hidden">
+        <iframe 
+            id="youtube-player"
+            width="0" 
+            height="0" 
+            src="https://www.youtube.com/embed/J76S5q_ETfo?enablejsapi=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="container mx-auto px-2 py-4">
+        <!-- Hero Section -->
+        <header class="text-center mb-4 animate__animated animate__fadeIn">
+            <div class="title-container relative">
+                <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 animate-gradient-x mb-2">
+                    Arev
+                </h1>
+                <div class="sparkles absolute top-0 left-0 w-full h-full pointer-events-none">
+                    <div class="sparkle"></div>
+                    <div class="sparkle"></div>
+                    <div class="sparkle"></div>
+                    <div class="sparkle"></div>
+                    <div class="sparkle"></div>
+                </div>
+            </div>
+            <div class="subtitle-container relative">
+                <p class="text-xl md:text-2xl text-purple-600 font-light tracking-wider animate-float">
+                    The Most Beautiful Soul
+                </p>
+                <div class="heart-trail"></div>
+            </div>
+            <div class="mt-2">
+                <svg class="w-12 h-12 md:w-16 md:h-16 mx-auto text-purple-500 animate__animated animate__pulse animate__infinite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+            </div>
+            <button id="startButton" class="mt-4 px-6 py-2 md:px-8 md:py-3 bg-purple-600 text-white rounded-full text-base md:text-lg font-semibold hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-float">
+                START
+            </button>
+        </header>
+
+        <!-- Cards Section -->
+        <section class="mb-4">
+            <div class="cats-scroll-container">
+                <div class="cats-scroll-wrapper">
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" alt="Graceful Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Strength</h3>
+                            <p class="text-gray-600">Your strength through this journey fills our hearts with love and admiration</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" alt="Playful Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Resilience</h3>
+                            <p class="text-gray-600">Your resilience makes us fall in love with you more every day</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" alt="Wise Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Wisdom</h3>
+                            <p class="text-gray-600">Your wisdom and intelligence make us love and respect you even more</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" alt="Determined Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Determination</h3>
+                            <p class="text-gray-600">Your determination makes us love and support you unconditionally</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Calm Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Calm</h3>
+                            <p class="text-gray-600">Your calm presence brings peace to our hearts and makes us love you more</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Leader Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Leadership</h3>
+                            <p class="text-gray-600">Your leadership inspires us and makes our love for you grow stronger</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Creative Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Creativity</h3>
+                            <p class="text-gray-600">Your creativity makes us fall in love with you all over again</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1577023311546-cdc07a8454d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Persistent Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Persistence</h3>
+                            <p class="text-gray-600">Your persistence through challenges makes our love for you deeper</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Visionary Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Vision</h3>
+                            <p class="text-gray-600">Your vision and dreams make us love and believe in you completely</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Success Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Success</h3>
+                            <p class="text-gray-600">Your success is our joy, and our love for you knows no bounds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-purple-600 relative">
+            <div class="footer-content">
+                <p class="text-base md:text-lg font-light tracking-wider animate-float">
+                    Created with <span class="heart-beat">❤️</span> for the most amazing person
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
