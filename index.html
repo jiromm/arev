@@ -20,17 +20,12 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-purple-100 to-pink-100 min-h-screen overflow-hidden">
-    <!-- Hidden YouTube Player -->
+    <!-- Hidden Audio Player -->
     <div class="hidden">
-        <iframe 
-            id="youtube-player"
-            width="0" 
-            height="0" 
-            src="https://www.youtube.com/embed/J76S5q_ETfo?enablejsapi=1" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
+        <audio id="background-music" preload="auto">
+            <source src="https://github.com/jiromm/arev/raw/refs/heads/master/cover.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <div class="container mx-auto px-4 py-8">
@@ -138,6 +133,69 @@
                             <p class="text-gray-600">Your success is our joy, and our love for you knows no bounds</p>
                         </div>
                     </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Elegant Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Elegance</h3>
+                            <p class="text-gray-600">Your elegance and grace make our hearts skip a beat</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Joyful Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Joy</h3>
+                            <p class="text-gray-600">Your joy and happiness light up our world</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mysterious Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Mystery</h3>
+                            <p class="text-gray-600">Your mysterious charm keeps us falling in love with you</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Adventurous Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Adventure</h3>
+                            <p class="text-gray-600">Your adventurous spirit makes our love story exciting</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Playful Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Playfulness</h3>
+                            <p class="text-gray-600">Your playful nature brings endless joy to our hearts</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dreamy Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Dreams</h3>
+                            <p class="text-gray-600">Your dreams inspire us to love and support you endlessly</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Artistic Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Artistry</h3>
+                            <p class="text-gray-600">Your artistic soul makes our love story beautiful</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Peaceful Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Peace</h3>
+                            <p class="text-gray-600">Your peaceful presence brings harmony to our love</p>
+                        </div>
+                    </div>
+                    <div class="cat-card bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Magical Cat" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-purple-800">Magic</h3>
+                            <p class="text-gray-600">Your magical presence makes our love story enchanting</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -152,7 +210,16 @@
         </footer>
     </div>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        // Initialize audio player
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('background-music');
+            if (audio) {
+                audio.volume = 0.3; // Lower volume for better experience
+                audio.loop = true;
+            }
+        });
+    </script>
     <script src="src/js/main.js"></script>
 </body>
 </html>
