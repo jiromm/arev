@@ -17,7 +17,3 @@ A beautiful static website created with love using HTML, CSS, and JavaScript.
 - JavaScript
 - Tailwind CSS
 - Animate.css
-
-## Deployment
-
-This website is deployed using GitHub Pages and can be accessed at: [https://abaghdasarya.github.io/arev-website/](https://abaghdasarya.github.io/arev-website/) 
