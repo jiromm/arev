@@ -12,7 +12,17 @@
 }
 
 .cat-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    transform-origin: center center;
+    overflow: hidden;
+    will-change: transform, opacity;
+    box-sizing: border-box;
 }
 
 .cat-card:hover {
@@ -21,81 +31,14 @@
 }
 
 .cat-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .cat-card:hover img {
     transform: scale(1.05);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom cursor effects */
-.cat-card {
-    cursor: pointer;
-}
-
-/* Gradient text effect */
-.gradient-text {
-    background: linear-gradient(45deg, #6B46C1, #D53F8C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.cats-scroll-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    height: 400px;
-    perspective: 1000px;
-}
-
-.cats-scroll-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
-}
-
-.cat-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease-in-out;
-    transform-origin: center center;
-    overflow: hidden;
-}
-
-.cat-card img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
 }
 
 .cat-card .card-content {
@@ -105,6 +48,7 @@ html {
 .cat-card:nth-child(1) {
     transform: translateZ(0px) scale(1);
     z-index: 3;
+    opacity: 1;
 }
 
 .cat-card:nth-child(2) {
@@ -379,34 +323,64 @@ html {
     letter-spacing: 0.05em;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 414px) {
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 0.75rem;
+    }
+
+    .title-container h1 {
+        font-size: 2.25rem;
+    }
+
+    .subtitle-container p {
+        font-size: 1.05rem;
+    }
+
+    .cats-scroll-container {
+        height: 350px;
+    }
+
+    .cat-card {
+        height: 350px;
+    }
+
+    .cat-card img {
+        height: 65%;
+    }
+
+    .cat-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .cat-card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
     .container {
         padding: 0.5rem;
     }
 
     .title-container h1 {
-        font-size: 2.5rem;
-        letter-spacing: -0.03em;
+        font-size: 2rem;
     }
 
     .subtitle-container p {
-        font-size: 1.1rem;
-        letter-spacing: 0.03em;
+        font-size: 1rem;
     }
 
     .cats-scroll-container {
         height: 300px;
-        margin: 0 auto;
     }
 
     .cat-card {
-        width: 280px;
-        height: 280px;
+        height: 300px;
     }
 
     .cat-card img {
-        height: 160px;
+        height: 60%;
     }
 
     .cat-card h3 {
@@ -414,39 +388,135 @@ html {
     }
 
     .cat-card p {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-
-    .footer-content {
-        padding: 1rem 0;
-    }
-
-    .footer-content p {
-        font-size: 0.85rem;
-    }
-
-    /* Optimize animations for mobile */
-    .sparkle {
-        width: 3px;
-        height: 3px;
-    }
-
-    /* Mobile optimizations for hearts */
-    .floating-heart {
         font-size: 0.8rem;
     }
-    
-    .floating-heart:nth-child(1) { font-size: 1rem; }
-    .floating-heart:nth-child(2) { font-size: 0.7rem; }
-    .floating-heart:nth-child(3) { font-size: 1.2rem; }
-    .floating-heart:nth-child(4) { font-size: 0.9rem; }
-    .floating-heart:nth-child(5) { font-size: 1.1rem; }
-    .floating-heart:nth-child(6) { font-size: 0.8rem; }
-    .floating-heart:nth-child(7) { font-size: 1.2rem; }
-    .floating-heart:nth-child(8) { font-size: 1rem; }
-    .floating-heart:nth-child(9) { font-size: 0.6rem; }
-    .floating-heart:nth-child(10) { font-size: 1.3rem; }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0.25rem;
+    }
+
+    .title-container h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitle-container p {
+        font-size: 0.95rem;
+    }
+
+    .cats-scroll-container {
+        height: 250px;
+    }
+
+    .cat-card {
+        height: 250px;
+    }
+
+    .cat-card img {
+        height: 55%;
+    }
+
+    .cat-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .cat-card p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-height: 667px) {
+    header {
+        margin-bottom: 1rem;
+    }
+
+    .cats-scroll-container {
+        height: 250px;
+    }
+
+    .cat-card {
+        height: 250px;
+    }
+
+    .cat-card img {
+        height: 55%;
+    }
+
+    footer {
+        margin-top: 1rem;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Base styles for all screen sizes */
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom cursor effects */
+.cat-card {
+    cursor: pointer;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(45deg, #6B46C1, #D53F8C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cats-scroll-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.cats-scroll-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Additional mobile optimizations */
@@ -456,7 +526,7 @@ html {
     }
 
     .cats-scroll-container {
-        height: 250px;
+        height: 240px;
     }
 
     .cat-card {
