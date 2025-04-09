@@ -1,28 +1,25 @@
-let player;
 let autoScrollInterval;
 let isPlaying = false;
 let touchStartY = 0;
 let touchEndY = 0;
 let currentIndex = 0;
 
-// Initialize YouTube Player
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-player', {
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
-}
-
-function onPlayerReady(event) {
-    // Player is ready, but we'll wait for the START button
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // Add floating animation to cat cards
     const catCards = document.querySelectorAll('.cat-card');
     const container = document.querySelector('.cats-scroll-container');
+    const audioPlayer = document.getElementById('background-music');
+    const cardsSection = document.querySelector('section');
     
+    // Hide cards initially
+    cardsSection.style.display = 'none';
+    
+    // Ensure audio is properly initialized
+    if (audioPlayer) {
+        audioPlayer.volume = 0.3; // Lower volume for better experience
+        audioPlayer.loop = true;
+    }
+
     catCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.2}s`;
         card.classList.add('animate__animated', 'animate__fadeInUp');
@@ -122,10 +119,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const startExperience = () => {
+    const startExperience = async () => {
         if (!isPlaying) {
+            // Show cards section
+            cardsSection.style.display = 'block';
+            cardsSection.classList.add('animate__animated', 'animate__fadeIn');
+            
             // Start music
-            player.playVideo();
+            if (audioPlayer) {
+                try {
+                    await audioPlayer.play();
+                    audioPlayer.volume = 0.3; // Lower volume for better experience
+                } catch (error) {
+                    console.error('Error playing audio:', error);
+                    // If autoplay fails, show a message to the user
+                    alert('Please click the START button to begin the experience.');
+                }
+            }
             
             // Start automatic scrolling with slower interval (8 seconds)
             autoScrollInterval = setInterval(() => {
@@ -137,8 +147,13 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.textContent = 'STOP';
             isPlaying = true;
         } else {
+            // Hide cards section
+            cardsSection.style.display = 'none';
+            
             // Stop music
-            player.pauseVideo();
+            if (audioPlayer) {
+                audioPlayer.pause();
+            }
             
             // Stop automatic scrolling
             clearInterval(autoScrollInterval);
